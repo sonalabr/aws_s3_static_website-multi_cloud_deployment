@@ -1,0 +1,27 @@
+Cloudflare + S3 Integration Steps
+
+1. Created an S3 Bucket (name same as my domain name)  and Unchecked “Block all public access”. 
+
+2. Enabled Static Website Hosting
+
+Noted down the S3 website endpoint (my-static-website-sonal.online.s3-website-ap-south-1.amazonaws.com).
+
+3. Uploaded Website Files into the S3
+
+4. Created a Cloudflare Account
+Entered my domain name as (my-static-website-sonal.online).
+Cloudflare scans DNS records
+
+5. Updated Nameservers in Namecheap
+Added the two nameservers given by Cloudflare
+
+6. Added DNS Record in Cloudflare
+Added
+
+Type: CNAME
+
+Name: @ 
+
+Target: my S3 website endpoint (my-static-website-sonal.online.s3-website-ap-south-1.amazonaws.com)
+
+7. Also enabled HTTPS
